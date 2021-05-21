@@ -1,0 +1,13 @@
+<p>Number of add items:{{ numberOfItem }}</p>
+<div class="main">
+    <div class="add-products" *ngFor="let prod of newList">
+        <img  class="pc-image" [src]="prod.imageUrl" alt="image">
+        <div class="info">
+            <ul>
+                <li>{{prod.name}}</li>
+                <li>{{prod.price}}</li>
+            </ul>
+            <button class="delete" (click)="removeItem(prod.id)">delete</button>
+        </div> 
+    </div>
+</div>
